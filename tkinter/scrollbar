@@ -1,0 +1,11 @@
+# Radiobutton using tkinter
+from tkinter import *
+m = Tk()
+scrbar = Scrollbar(m)
+scrbar.pack(side=RIGHT,fill=Y)
+lst=Listbox(m,yscrollcommand=Scrollbar.set)
+for i in range(120):
+    lst.insert(END,"tis scrollbar with line no:",str(i))
+    lst.pack(side=LEFT,fill=BOTH)
+    scrbar.config(command=lst.yview)
+    m.mainloop()

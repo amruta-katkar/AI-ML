@@ -1,0 +1,16 @@
+# create menu using tkinter
+from tkinter import *
+m = Tk()
+m.title("Menu")
+menu = Menu(m)
+m.config(menu = menu)
+filemenu = Menu(menu)
+menu.add_cascade(label ='file',menu = filemenu)
+filemenu.add_command(label = 'NEw')
+filemenu.add_command(label = "Open")
+filemenu.add_separator()
+filemenu.add_command(label = "Exit",command = m.quit())
+helpmenu = Menu(menu)
+menu.add_cascade(label = "help",menu = helpmenu)
+helpmenu.add_command(label = "About")
+m.mainloop()
